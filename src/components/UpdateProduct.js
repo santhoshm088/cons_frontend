@@ -24,7 +24,7 @@ export default function UpdateProduct({
   };
 
   const updateProduct = () => {
-    fetch("http://localhost:5000/api/product/update", {
+    fetch("/api/product/update", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

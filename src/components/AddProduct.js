@@ -30,7 +30,7 @@ export default function AddProduct({
     window.alert("kk");
 
     
-    fetch("http://localhost:5000/api/product/add", {
+    fetch("/api/product/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

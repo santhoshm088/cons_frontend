@@ -47,7 +47,7 @@ export default function SigninScreen() {
    
       dispatch({ type: 'FETCH_REQUEST' });
      
-      const { data } = await Axios.put('/users/signin', {
+      const { data } = await Axios.put('https://cons-backend.vercel.app/users/signin', {
         
         name,
         email,
