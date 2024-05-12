@@ -1,0 +1,43 @@
+
+
+
+.body{
+  min-height: 100vh;
+
+}
+
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -400px;
+  padding: 0%;
+ 
+}
+
+
+div div .ins{
+  border: none;
+  text-align: center;
+  background-color: rgb(204, 247, 248);
+  box-shadow : 0 0 5px cyan,0 0 25px cyan;
+  color: rgb(236, 133, 117);
+
+}
+
+
+div .col{
+ 
+ display: block;
+ align-items: center;
+}
+
+div .card{
+  height: 450px;
+  width: 350px;
+  
+
+}
+div img{
+  height: 230px;
+}

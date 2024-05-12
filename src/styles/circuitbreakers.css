@@ -1,0 +1,63 @@
+div .circuit{
+    font-size: medium;
+    letter-spacing: 0px;
+}
+
+.top_circuit{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+.circuit_body{
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+.circuit_row{
+    height: 350px;
+  
+}
+.circuit_row .col{
+    height: 350px;
+}
+
+.circuit_row .card{
+    height: 350px;
+}
+
+.circuit_header {
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    color: #ffffff;
+  
+  }
+  
+  .neons {
+   
+    text-align: center;
+  }
+  
+  .neons h1 {
+   font-size: 4rem;
+   text-align: center;
+    font-weight: bold;
+   -webkit-animation: glow 2s ease-in-out infinite alternate;
+   -moz-animation: glow 2s ease-in-out infinite alternate;
+   animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+      from {
+       color: #fff;
+     text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
+   }
+   
+   to {
+      color: gray;
+     text-shadow:  0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+   }
+  }
