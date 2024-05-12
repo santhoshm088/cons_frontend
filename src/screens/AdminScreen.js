@@ -30,7 +30,7 @@ export default function AdminScreen() {
     const fetchUsers = async () => {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
-        const { data } = await Axios.get('/users/logincount');
+        const { data } = await Axios.get('https://cons-backend-1.onrender.com/users/logincount');
         localStorage.setItem('userLists', JSON.stringify(data));
         ctxDispatch({ type: 'USER_LISTS', payload: data });
         dispatch({ type: 'FETCH_SUCCESS' });
