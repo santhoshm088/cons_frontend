@@ -10,7 +10,7 @@ import HomeScreen from './screens/HomeScreen';
 import Inventory from "./screens/Inventory";
 import Circuitbreakers from './screens/Circuitbreakers';
 import About from './screens/About';
-
+import Login from './screens/Login';
 
 import SigninScreen from './screens/SigninScreen';
 import { Store } from './Store';
@@ -34,6 +34,7 @@ function App() {
       />
       <Routes>
         {!userInfo && <Route path="/signin" element={<SigninScreen />} />}
+        {!userInfo && <Route path="/Login" element={<Login />} />}
 
         <Route path="/" element={<HomeScreen />} />
         <Route path="/about" element={<About />} />

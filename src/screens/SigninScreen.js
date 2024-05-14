@@ -7,8 +7,7 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import ReactLoading from 'react-loading';
 import Video from '../assets/login_back.mp4';
-
-
+import { Link } from 'react-router-dom';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -43,30 +42,24 @@ export default function SigninScreen() {
 
     e.preventDefault();
    
-    try {
-   
-      dispatch({ type: 'FETCH_REQUEST' });
-     
-      const { data } = await Axios.put('https://cons-backend-1.onrender.com/users/signin', {
-        
-        name,
-        email,
-       password,
-       
-      
-      });
-    
-      ctxDispatch({ type: 'USER_SIGNIN', payload: data });
-      
-      localStorage.setItem('userInfo', JSON.stringify(data));
-      
-      dispatch({ type: 'FETCH_SUCCESS' });
-      
-      toast.success(data.name + ' loggedin successfully!');
-    
-      navigate('/guidelines');
-      
-    } catch (err) {
+      try{
+            await Axios.post("users/signup",{
+                name,email,password
+            }).then(res =>{
+                if(res.data==="exist"){
+                    toast.error("User email already exist");
+                    
+                }
+                else{
+                  toast.success("Account created")
+                    
+                    navigate('/login');
+                   
+                   
+                   
+                }
+            })
+        } catch (err) {
      
       dispatch({ type: 'FETCH_FAILED' });
       toast.error(getError(err));
@@ -109,7 +102,7 @@ export default function SigninScreen() {
         <form className="register-form my-5" onSubmit={registerHandler}>
 
           <div>
-            <h1 className='text-center'>LOGIN</h1>
+            <h1 className='text-center'>SIGN UP</h1>
           </div>
          
           <div className="input-field-tags">
@@ -164,6 +157,9 @@ export default function SigninScreen() {
           <button type="submit" className="register-button">
             Register{' '}
           </button>{' '}
+          <div className='w-100 text-center'>
+        <p className='' style={{color:'red'}}>Already have an account <Link to='/login' style={{textDecoration:'none'}}>Login</Link></p>
+        </div>
         </form>{' '}
      
      

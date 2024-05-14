@@ -2,8 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../styles/HomeScreen.css';
+import { useContext, useState } from 'react';
+
+import { Store } from '../Store';
 
 export default function HomeScreen() {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { userInfo, isAdmin } = state;
   return (
     
 <div className='body' >
@@ -29,9 +34,12 @@ export default function HomeScreen() {
 
 
          <div className="get-started-button-container">
-         <Link to="/guidelines" className="get-started-button">
+         {userInfo ? <Link to="/guidelines" className="get-started-button">
            Get products <i className="fa-solid fa-arrow-right arrows"></i>
-         </Link>
+         </Link>: <Link to="/signin" className="get-started-button">
+           Get products <i className="fa-solid fa-arrow-right arrows"></i>
+         </Link>}
+
        </div>
 
  

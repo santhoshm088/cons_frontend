@@ -31,7 +31,9 @@ export default function GuidelinesScreen() {
               <div class="card-body">
                 <h5 class="card-title">Pipes</h5>
                 <p class="card-text">Pipes for circuit breakers ensure safe electrical flow, protecting against overload or short circuit, vital for electrical system integrity.</p>
-
+                <Link to="/circuitbreakers" className="anc">
+                  Get Products <i className=""></i>
+                </Link>
               </div>
             </div>
           </div>
