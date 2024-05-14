@@ -45,7 +45,7 @@ export default function Login() {
     try {
         dispatch({ type: 'FETCH_REQUEST' });
         
-        const { data } = await Axios.put('/users/signin', {
+        const { data } = await Axios.put('https://cons-backend-1.onrender.com/users/signin', {
           email,
           password,
         });

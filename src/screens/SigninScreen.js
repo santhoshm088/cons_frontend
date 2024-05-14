@@ -43,7 +43,7 @@ export default function SigninScreen() {
     e.preventDefault();
    
       try{
-            await Axios.post("users/signup",{
+            await Axios.post("https://cons-backend-1.onrender.com/users/signup",{
                 name,email,password
             }).then(res =>{
                 if(res.data==="exist"){
