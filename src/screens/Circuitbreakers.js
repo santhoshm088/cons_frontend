@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/circuitbreakers.css";
 import Havells from "../assets/mcb/havells3.png";
+import Sns from "../assets/SNS.jpeg";
 import Navbar from '../components/Navbar';
 import { useLocation } from "react-router-dom";
 import { useState,useEffect } from "react";
@@ -68,7 +69,7 @@ function Circuitbreakers(props){
          <div className='row circuit_row my-2'>
          <div className='col-4 col'>
          <div class="card" >
-     <img src={Havells} class="card-img-top" alt="..."/>
+     <img src={Sns} class="card-img-top" alt="..."/>
      <div class="card-body">
      <div className="text-center">
        <h5 class="card-title">{item.manufacturer}</h5>
