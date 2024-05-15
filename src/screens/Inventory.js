@@ -49,7 +49,7 @@ function Inventory() {
   // Fetching all stores data
   const fetchSalesData = () => {
   
-    fetch(`http://localhost:5000/api/store/get/}`)
+    fetch(`https://cons-backend-1.onrender.com/api/store/get/}`)
       .then((response) => response.json())
       .then((data) => {
         setAllStores(data);
