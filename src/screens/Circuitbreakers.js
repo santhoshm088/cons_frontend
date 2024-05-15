@@ -21,7 +21,7 @@ function Circuitbreakers(props){
       try {
         
         
-         await axios.get('users/page', {
+         await axios.get('https://cons-backend-1.onrender.com/users/page', {
           params: {
             value: data
           }
