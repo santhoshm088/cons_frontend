@@ -30,7 +30,7 @@ export default function AddProduct({
     window.alert("kk");
 
     
-    fetch("/api/product/add", {
+    fetch("https://cons-backend-1.onrender.com/api/product/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

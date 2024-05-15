@@ -24,7 +24,7 @@ export default function UpdateProduct({
   };
 
   const updateProduct = () => {
-    fetch("/api/product/update", {
+    fetch("https://cons-backend-1.onrender.com/api/product/update", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
