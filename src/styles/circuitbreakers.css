@@ -35,6 +35,13 @@ div .circuit{
     color: #ffffff;
   
   }
+
+
+  .align{
+    display: flex;
+   justify-content: flex-start;
+   gap: 50px;
+  }
   
   .neons {
    

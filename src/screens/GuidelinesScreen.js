@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Store } from '../Store';
 import '../styles/GuidelinesScreen.css';
@@ -10,11 +10,14 @@ import Circuit_breakers from '../assets/circuit_breaker.jpg';
 export default function GuidelinesScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
+
+   const [equp,setEqup]=useState("Pipes")
+
   return (
 
 
 
-
+ 
     <div className='body'>
 
       <div className='w-100 top '>
@@ -31,7 +34,7 @@ export default function GuidelinesScreen() {
               <div class="card-body">
                 <h5 class="card-title">Pipes</h5>
                 <p class="card-text">Pipes for circuit breakers ensure safe electrical flow, protecting against overload or short circuit, vital for electrical system integrity.</p>
-                <Link to="/circuitbreakers" className="anc">
+                <Link to="/circuitbreakers" className="anc" state={{equp:equp}}>
                   Get Products <i className=""></i>
                 </Link>
               </div>
@@ -45,7 +48,7 @@ export default function GuidelinesScreen() {
                 <h5 class="card-title">Wires</h5>
                 <p class="card-text">
                   Circuit breakers require appropriately sized wires to safely carry current, preventing overheating and potential hazards within electrical systems.</p>
-                <Link to="/circuitbreakers" className="anc">
+                <Link to="/circuitbreakers" className="anc" state={{equp:"Wires"}}>
                   Get Products <i className=""></i>
                 </Link>
               </div>
@@ -59,7 +62,7 @@ export default function GuidelinesScreen() {
                 <h5 class="card-title">Circuit Breakers</h5>
                 <p class="card-text">
                   Electrical safety devices that automatically interrupt power flow when detecting overcurrents, protecting circuits from damage due to overload or short circuit.</p>
-                <Link to="/circuitbreakers" className="anc">
+                <Link to="/circuitbreakers" className="anc" state={{equp:"Circuit Breakers"}}>
                   Get Products <i className=""></i>
                 </Link>
               </div>
