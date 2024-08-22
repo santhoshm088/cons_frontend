@@ -16,7 +16,7 @@ export default function AdminSigninScreen() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (email === 'ccc.23cse@kongu.edu' && password === 'kongu@2022') {
+    if (email === 'admin@email.com' && password === 'Admin@123') {
       localStorage.setItem('isAdmin', true);
       ctxDispatch({ type: 'ADMIN', payload: true });
       navigate('/admin');
